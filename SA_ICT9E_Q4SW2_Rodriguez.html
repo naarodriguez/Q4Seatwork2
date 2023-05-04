@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+
+	<title>Q4 Seatwork 2</title>
+
+	<style type="text/css">
+		body{
+			background-color: #CBAED7;
+		}
+
+		p{
+			font-family: 'Playfair Display', serif;
+			font-size: 150%;
+			text-align: center;
+		}
+
+		h1{
+			font-family: 'Alfa Slab One', cursive;
+			font-size: 400%;
+			text-align: center;
+			background-color: #B691D2;
+		}
+
+		table{
+			padding: 10px;
+			align-content: center;
+			width: 100%; height: 100%;
+
+		}
+
+		td{
+			background-color: #B691D2;
+			text-align: center;
+			font-size: 130%;
+		}
+
+		thead{
+			background-color: #B691D2;
+			text-align: center;
+			font-size: 130%;
+		}
+
+		label{
+			font-family: 'Playfair Display', serif;
+			text-align: left;
+			font-size: 200%;
+		}
+	</style>
+</head>
+<body>
+
+<h1>Weather Today</h1>
+
+<p id="today"></p>
+
+<script type="text/javascript">
+
+	const date = new Date();
+	document.getElementById("today").innerHTML = date;
+
+</script>
+
+
+ <label for="Fahrenheit">Fahrenheit:</label>
+ <input type="Fahrenheit Temperature" placeholder="Press Enter" id="fahren" 
+ 	onchange="temperatureConverter(this.value)">
+<label for="Celsius" id="celc">Celcius:</label>
+<p>Table</p>
+<script>
+	function temperatureConverter
+	(temperature){
+
+  		temperature = parseInt(temperature);
+  		document.getElementById("celc").
+  		innerHTML = (temperature-32) /.5556; }
+
+</script>
+
+<div class="container">
+	<table border="2">
+
+	<thead>
+  		  <tr>
+   			<th scope="col">Celsius(°C)</th>
+    		<th scope="col">Fahrenheit(℉)</th>
+			<th scope="col">Description</th>
+		</tr>
+  	</thead>
+
+		<tr style="width: 100px; height: 100px;">
+            <td> -884.94°C </td>
+            <td colspan="1"> -459.67°F</td>
+            <td> Absolute 0 Temperature </td>
+        </tr>
+
+       
+		<tr style="width: 100px; height: 100px;">
+            <td> 0°C </td>
+            <td colspan="1"> 32.0°F</td>
+            <td> Freezing/Melting Point of Water </td>
+        </tr>
+
+
+		<tr style="width: 100px; height: 100px;">
+            <td> 68.03°C </td>
+            <td colspan="1"> 69.8°F</td>
+            <td> Room Temperature </td>
+        </tr>
+
+
+		<tr style="width: 100px; height: 100px;">
+            <td> 119.87°C </td>
+            <td colspan="1"> 98.6°F</td>
+            <td> Average Body Temperature </td>
+        </tr>
+
+
+		<tr style="width: 100px; height: 100px;">
+            <td> 323.97°C </td>
+            <td colspan="1"> 212.0°F</td>
+            <td> Water Boiling Point </td>
+        </tr>
+	
+
+	</table>
+
+
+
+
+</div>
+
+</body>
+</html>
